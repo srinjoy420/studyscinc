@@ -1,0 +1,655 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    text-align: center;
+    background-color: azure;
+    padding: 30px;
+}
+.header{
+    background-color: white;
+    height: 50px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+}
+.head-section{
+    
+    max-width: 1000px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.logo span{
+    font-size: 24px;
+    font-weight: bolder;
+    
+
+}
+.logo img{
+    color: blue;
+}
+.navigation{
+    display: none;
+    gap: 20px;
+    font-weight: 400;
+    color: red
+}
+/* media quary */
+@media screen and (min-width:760px) {
+    .navigation{
+        display: flex;
+    }
+    
+}
+a:hover{
+    color: blueviolet;
+}
+.bt {
+    display: none;
+    background-color: rgb(103, 92, 197);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Add more styling properties if needed */
+}
+.bt:hover{
+    background-color: aqua;
+}
+/* media quary */
+@media screen and (min-width:760px) {
+    .bt{
+        display: block;
+    }
+    
+}
+.menu{
+    display: none;
+}
+@media screen and (max-width:768px) {
+    .menu{
+        display: block;
+    }
+    
+}
+/* style our hero section */
+.one{
+    max-width: 980px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+   
+    padding-top: 50px;
+    gap: 30px;
+}
+
+.right{
+    height: 450px;
+    width:450px ;
+    border-radius: 7px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.heroimg{
+    width: 100%;
+    height: 100%;
+}
+.left{
+    /* display: flex;
+    flex-direction: column;
+    float: left; */
+    text-align: center;
+    animation: slidleft ease 2s forwards ;
+    opacity: 0;
+    
+}
+/* for the animation */
+@keyframes slidleft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+    
+}
+.heroimg{
+    border-radius: 8px;
+}
+.left span{
+    display: flex;
+   
+   
+}
+/* style the words */
+.uno{
+    font-size: 14px;
+    color: rgb(21, 118, 208);
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.des{
+    font-size: 42px;
+    font-weight: bolder;
+   
+}
+.des:nth-child(3){
+    padding-bottom: 30px;
+}
+.tres{
+    font-size: 14px;
+    padding: 5px;
+    
+}
+/* now styleing the buttons */
+.hero-button{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    gap: 9px;
+}
+.violete{
+    padding: 10px 15px;
+    border-radius: 7px;
+    background-color: rgb(103, 92, 197);
+    color: white;
+    font-weight: 400;
+    border: none;
+}
+.black{
+    padding: 10px 15px;
+    border-radius: 7px;
+    background-color: rgb(17, 15, 15);
+    color: white;
+    font-weight: 400;
+    border: none;
+
+}
+/* make it responsive */
+@media screen and (min-width:768px) {
+    .one{
+        display: flex;
+        flex-direction: row;
+    }
+   .hero-button{
+    display: flex;
+    justify-content: flex-start;
+   }
+}
+/* the trust section */
+.trust{
+    max-width: 500vw;
+    height: 20px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    padding-top: 55px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+}
+.trust h2{
+    position: relative;
+    top: -20px;
+    animation: slidleft ease 2s forwards ;
+    opacity: 0;
+}
+
+/* company grid */
+.company-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.company-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+    padding: 2rem;
+    background-color: #D3D3D3;
+    border-radius: 10px;
+    margin-top: 20px;
+    opacity: 0.5;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border: none;
+    animation: slidleft ease 2s forwards
+   
+}
+@media screen and (min-width:760px) {
+    .company-grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+.comapnylogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    
+}
+.logotext{
+    font-size: 15px;
+}
+@media screen and (max-width:760px) {
+    .right{
+        height: 300px;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+    .right img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+}
+/* style the card container */
+
+/* style the colorful cards */
+
+/* the main hole gray cintainer */
+.maincontainer{
+    background-color: #D3D3D3;
+    width: 100%;
+    margin-top: 30px;
+}
+/* the secoend container */
+.semicontainer{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+.tag-line{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.tag-line h3{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.tag-line p{
+    font-size: 15px;
+    color: grey;
+    opacity: 1;
+}
+/* style the small icons */
+.card-img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+/* style the cards */
+.cards{
+    color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+   gap: 20px;
+   width: 100%;
+   margin-top: 20px;
+   
+   
+    
+}
+/* cardzoom hover effect */
+.card:hover{
+    transform: scale(1.2);
+}
+
+
+.card{
+    padding: 25px 20px;
+    /* background-color: blue; */
+    border-radius: 9px;
+    transition: all 2s;
+}
+
+/* responsive */
+@media screen and (min-width:768px) {
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+    
+}
+/* now change the color of each classs */
+.card1{
+    background-color: rgb(65, 119, 200);
+}
+.card2{
+    background-color: palevioletred;
+}
+.card3{
+    background-color: rgb(143, 143, 18);
+}
+.card4{
+    background-color: rgb(15, 131, 92);
+}
+.card5{
+    background-color: rgb(41, 106, 41);
+
+}
+.card6{
+    background-color: rgb(111, 23, 111);
+}
+
+/* style the feedback section */
+.main-feedback{
+    width: 100%;
+    margin-top: 30px;
+}
+.semifeedback{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    
+
+}
+.feedback-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+/* media quaryy for responsivness the card section */
+@media screen and (min-width:768px) {
+    .feedback-cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+.feedback-header{
+    margin-bottom: 19px;
+    font-size: 24px;
+}
+
+/* feedback profile images */
+.f-card{
+    border: 2px solid  black;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: all 2s;
+    
+}
+/* hover effect */
+.f-card:hover{
+    transform: scale(1.2);
+}
+
+.f-img{
+    /* height: 45px;
+    width: 45px; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: fill;
+    position: relative;
+    left: 8px;
+    top: 5px;
+    margin-top: 10px;
+    
+    
+}
+.round{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+   
+    display: flex;
+    align-items: center;
+    background-color: #D3D3D3;
+}
+.f-card span{
+    font-size: 10px;
+    
+
+}
+.f-card h4{
+    font-weight: bold;
+    color: rgb(108, 40, 173);
+}
+.f-card p{
+    font-size: 10px;
+}
+
+/* now we style the news letter section */
+.main-newsteller{
+    margin-top: 25px;
+    width: 100%;
+}
+.semi-newateller{
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: #D3D3D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+@media screen and (min-width:768px) {
+    .semi-newateller{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .right-newsteller{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      
+    }
+    
+}
+/* style the image section  */
+.left-newsteller{
+    width: 40%;
+
+}
+.left-newsteller img{
+    width: 100%;
+    height: 100%;
+    
+}
+.mail{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.input-info h3{
+    color: rgb(126, 42, 203);
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.input-info p,span{
+    font-size: 15px;
+}
+.input-info a{
+    text-decoration: underline;
+    color: rgb(45, 79, 203);
+
+}
+.mail{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.mail-input{
+    border-radius: 4px;
+    border: none;
+    padding-top: 10px;
+}
+.mail-bt{
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    background-color:  rgb(126, 42, 203);
+    color: white;
+    font-weight: 500;
+}
+/* .input-info span{
+    position: relative;
+    left: 79px;
+}
+.input-info p{
+    position: relative;
+    right: 25px;
+}
+.input-info h3{
+    position: relative;
+    right: 10px;
+} */
+/* style the main footer container */
+.main-footer{
+    width: 100%;
+    margin-top: 35px;
+
+
+}
+.sub-footer{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    
+    margin: 0 auto;
+    
+}
+/* now the media quary */
+@media screen and (min-width:768px) {
+    .sub-footer{
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+}
+.ind-notice ul li{
+    list-style: none;
+}
+.footer-img{
+    width: 20px;
+}
+
+.left-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.left-footer span{
+    font-size: 24px;
+    font-weight: bold;
+}
+.left-footer p{
+    font-size: 15px;
+    color: gray;
+}
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.footer-svg{
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+}
+
+.notices{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+/* media quary{ */
+    @media screen and (min-width:768px) {
+        .notices{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            justify-content: center;
+            align-items: center;
+        }
+        
+    }
+.ind-notice{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ind-notice ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.ind-notice h4{
+    font-weight: bold;
+}
+.ind-notice li{
+    font-size: 15px;
+    color: grey;
+
+}
+ 
+.copyright{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+}
